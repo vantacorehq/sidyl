@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sibyl-reasoning"
+version = "0.1.0"
+description = "Bayesian, causal and calibrated reasoning engine in one file: autodiff, Hamiltonian Monte Carlo, ADVI, do-calculus, AIPW, IV, conformal forecasts."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["numpy>=1.22"]
+keywords = ["bayesian", "hmc", "mcmc", "causal-inference", "conformal-prediction", "autodiff", "uncertainty"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Mathematics",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/vantacorehq/sibyl"
+Issues = "https://github.com/vantacorehq/sibyl/issues"
+
+[project.scripts]
+sibyl = "sibyl:cli"
+
+[tool.setuptools]
+py-modules = ["sibyl"]
